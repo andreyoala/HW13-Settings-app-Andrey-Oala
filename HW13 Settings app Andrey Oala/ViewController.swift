@@ -35,6 +35,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             },
             SettingsOption(title: "Bluetooth", icon: UIImage(systemName: "point.3.connected.trianglepath.dotted"), iconBackgroundColor: .systemGreen) {
                 
+            },
+            SettingsOption(title: "Cellular", icon: UIImage(systemName: "antenna.radiowaves.left.and.right"), iconBackgroundColor: .systemGreen) {
+                
             }
             ]))
 
