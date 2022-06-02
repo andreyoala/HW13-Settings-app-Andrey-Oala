@@ -62,6 +62,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             },
             SettingsOption(title: "Home Screen", icon: UIImage(systemName: "app.badge.fill"), iconBackgroundColor: .systemGreen) {
                 
+            },
+            SettingsOption(title: "Accessibility", icon: UIImage(systemName: "figure.wave.circle"), iconBackgroundColor: .systemGreen) {
+                
             }
             
             ]))
