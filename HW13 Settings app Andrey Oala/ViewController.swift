@@ -59,6 +59,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             },
             SettingsOption(title: "Display & Brightness", icon: UIImage(systemName: "textformat.size"), iconBackgroundColor: .systemGreen) {
                 
+            },
+            SettingsOption(title: "Home Screen", icon: UIImage(systemName: "app.badge.fill"), iconBackgroundColor: .systemGreen) {
+                
             }
             
             ]))
