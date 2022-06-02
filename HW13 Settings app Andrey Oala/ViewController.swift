@@ -69,6 +69,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             ,
             SettingsOption(title: "Wallpapers", icon: UIImage(systemName: "photo.fill"), iconBackgroundColor: .systemGreen) {
                 
+            },
+            SettingsOption(title: "Siri & Search", icon: UIImage(systemName: "h.square.on.square.fill"), iconBackgroundColor: .systemGreen) {
+                
             }
             
             ]))
