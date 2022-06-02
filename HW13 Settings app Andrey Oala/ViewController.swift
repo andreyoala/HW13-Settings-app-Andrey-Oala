@@ -22,15 +22,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var models = [Section]()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return models.count
+        return models[section].options.count
     }
     
     func configureCells() {
         models.append(Section(title: "General", options: [
             SettingsOption(title: "Airplane Mode", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemGreen) {
                 
+            },
+            SettingsOption(title: "Wi-Fi", icon: UIImage(systemName: "wifi"), iconBackgroundColor: .systemGreen) {
+                
             }
             ]))
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -41,6 +45,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         cell.configure(with: model)
         return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return models.count
     }
     
 
@@ -67,6 +75,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 extension ViewController {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let model = models[indexPath.section].options[indexPath.row]
+        model.handler()
         let cell = tableView.cellForRow(at: indexPath)
             let text = cell?.textLabel?.text
             if let text = text {
