@@ -41,6 +41,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             },
             SettingsOption(title: "Notifications", icon: UIImage(systemName: "app.badge.fill"), iconBackgroundColor: .systemGreen) {
                 
+            },
+            SettingsOption(title: "Sounds & Haptics", icon: UIImage(systemName: "speaker.wave.3"), iconBackgroundColor: .systemGreen) {
+                
             }
             ]))
 
