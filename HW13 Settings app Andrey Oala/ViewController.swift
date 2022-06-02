@@ -1,40 +1,58 @@
-//
-//  ViewController.swift
-//  HW13 Settings app Andrey Oala
-//
-//  Created by Andrey Oala on 02.06.2022.
-//
-
 import UIKit
 
+struct Section {
+    let title: String
+    let options: [SettingsOption]
+}
 
+struct SettingsOption {
+    let title: String
+    let icon: UIImage?
+    let iconBackgroundColor: UIColor
+    let handler: (() -> Void)
+}
 
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let settingsNames = [["Airplane Mode", "Wi-Fi", "Bluetooth", "Cellular"],
+    var settingsNames = [["Airplane Mode", "Wi-Fi", "Bluetooth", "Cellular"],
                              ["Notifications", "Sounds & Haptics", "Focus", "Screen Time"],
                              ["General", "Control Center", "Display & Brightness", "Home Screen", "Accessibility", "Wallpapers", "Siri & Search"]]
+    // let settingsImages = ["airplane", "wifi", "point.3.connected.trianglepath.dotted", "antenna.radiowaves.left.and.right", "app.badge.fill", "speaker.wave.3", "moon.fill", "hourglass", "gear", "switch.2", "textformat.size", "app.badge.fill", "figure.wave.circle", "photo.fill", "h.square.on.square.fill"]
+    var models = [Section]()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return settingsNames.count
+        return models.count
+    }
+    
+    func configureCells() {
+        models.append(Section(title: "General", options: [
+            SettingsOption(title: "Airplane Mode", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .clear) {
+                
+            }
+            ]))
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = settingsNames[indexPath.section][indexPath.row]
+        let model = models[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingsTableViewCell.indentifier,
+                                                 for: indexPath) as? SettingsTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.configure(with: model)
         return cell
     }
     
 
     private let tableVIew: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        table.register(SettingsTableViewCell.self, forCellReuseIdentifier: SettingsTableViewCell.indentifier)
         return table
     }()
     
     
     override func viewDidLoad() {
+        configureCells()
         super.viewDidLoad()
         title = "Settings"
         view.addSubview(tableVIew)

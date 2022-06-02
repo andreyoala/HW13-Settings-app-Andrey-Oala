@@ -13,6 +13,7 @@
 		554C287E2848C243008AE36B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 554C287C2848C243008AE36B /* Main.storyboard */; };
 		554C28802848C244008AE36B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 554C287F2848C244008AE36B /* Assets.xcassets */; };
 		554C28832848C244008AE36B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 554C28812848C244008AE36B /* LaunchScreen.storyboard */; };
+		554C288B2848CB1C008AE36B /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554C288A2848CB1C008AE36B /* SettingsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		554C287F2848C244008AE36B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		554C28822848C244008AE36B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		554C28842848C244008AE36B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		554C288A2848CB1C008AE36B /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				554C287F2848C244008AE36B /* Assets.xcassets */,
 				554C28812848C244008AE36B /* LaunchScreen.storyboard */,
 				554C28842848C244008AE36B /* Info.plist */,
+				554C288A2848CB1C008AE36B /* SettingsTableViewCell.swift */,
 			);
 			path = "HW13 Settings app Andrey Oala";
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			files = (
 				554C287B2848C243008AE36B /* ViewController.swift in Sources */,
 				554C28772848C243008AE36B /* AppDelegate.swift in Sources */,
+				554C288B2848CB1C008AE36B /* SettingsTableViewCell.swift in Sources */,
 				554C28792848C243008AE36B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
