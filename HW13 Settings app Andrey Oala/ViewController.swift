@@ -50,7 +50,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             },
             SettingsOption(title: "Screen Time", icon: UIImage(systemName: "hourglass"), iconBackgroundColor: .systemGreen) {
                 
+            },
+            SettingsOption(title: "General", icon: UIImage(systemName: "gear"), iconBackgroundColor: .systemGreen) {
+                
             }
+            
             ]))
 
     }
