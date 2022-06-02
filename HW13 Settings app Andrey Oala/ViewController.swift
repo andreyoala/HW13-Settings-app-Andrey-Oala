@@ -53,6 +53,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             },
             SettingsOption(title: "General", icon: UIImage(systemName: "gear"), iconBackgroundColor: .systemGreen) {
                 
+            },
+            SettingsOption(title: "Control Center", icon: UIImage(systemName: "switch.2"), iconBackgroundColor: .systemGreen) {
+                
             }
             
             ]))
