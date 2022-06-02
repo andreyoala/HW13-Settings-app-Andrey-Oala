@@ -27,14 +27,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func configureCells() {
         models.append(Section(title: "General", options: [
-            SettingsOption(title: "Airplane Mode", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .clear) {
+            SettingsOption(title: "Airplane Mode", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemGreen) {
                 
             }
             ]))
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let model = models[indexPath.row]
+        let model = models[indexPath.section].options[indexPath.row]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingsTableViewCell.indentifier,
                                                  for: indexPath) as? SettingsTableViewCell else {
             return UITableViewCell()
