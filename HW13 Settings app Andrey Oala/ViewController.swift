@@ -38,6 +38,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             },
             SettingsOption(title: "Cellular", icon: UIImage(systemName: "antenna.radiowaves.left.and.right"), iconBackgroundColor: .systemGreen) {
                 
+            },
+            SettingsOption(title: "Notifications", icon: UIImage(systemName: "app.badge.fill"), iconBackgroundColor: .systemGreen) {
+                
             }
             ]))
 
