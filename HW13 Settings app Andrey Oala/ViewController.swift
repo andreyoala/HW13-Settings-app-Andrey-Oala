@@ -44,6 +44,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             },
             SettingsOption(title: "Sounds & Haptics", icon: UIImage(systemName: "speaker.wave.3"), iconBackgroundColor: .systemGreen) {
                 
+            },
+            SettingsOption(title: "Focus", icon: UIImage(systemName: "moon.fill"), iconBackgroundColor: .systemGreen) {
+                
             }
             ]))
 
