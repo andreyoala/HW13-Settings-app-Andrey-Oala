@@ -66,6 +66,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             SettingsOption(title: "Accessibility", icon: UIImage(systemName: "figure.wave.circle"), iconBackgroundColor: .systemGreen) {
                 
             }
+            ,
+            SettingsOption(title: "Wallpapers", icon: UIImage(systemName: "photo.fill"), iconBackgroundColor: .systemGreen) {
+                
+            }
             
             ]))
 
