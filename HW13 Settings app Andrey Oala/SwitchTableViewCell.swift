@@ -1,8 +1,8 @@
 import UIKit
 
-class SettingsTableViewCell: UITableViewCell {
+class SwitchTableViewCell: UITableViewCell {
 
-    static let indentifier = "SettingsTableViewCell"
+    static let indentifier = "SwitchTableViewCell"
     
     private let iconContainer: UIView = {
         let view = UIView()
@@ -24,14 +24,21 @@ class SettingsTableViewCell: UITableViewCell {
         label.numberOfLines = 1
         return label
     }()
-
+    
+    private let mySwitch: UISwitch = {
+       let mySwitch = UISwitch()
+       mySwitch.onTintColor = .systemGreen
+       return mySwitch
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super .init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(label)
         contentView.addSubview(iconContainer)
+        contentView.addSubview(mySwitch)
         iconContainer.addSubview(iconImageView)
         contentView.clipsToBounds = true
-        accessoryType = .disclosureIndicator
+        accessoryType = .none
     }
     required init?(coder: NSCoder) {
         fatalError()
@@ -45,21 +52,29 @@ class SettingsTableViewCell: UITableViewCell {
                                      y: (size-imageSize)/2,
                                      width: imageSize,
                                      height: imageSize)
+        mySwitch.sizeToFit()
+        mySwitch.frame = CGRect(x: contentView.frame.size.width - mySwitch.frame.size.width - 20,
+                                y: (contentView.frame.size.height - mySwitch.frame.size.height) / 2,
+                                width: mySwitch.frame.size.width,
+                                height: mySwitch.frame.size.height)
         
         label.frame = CGRect(x: 25 + iconContainer.frame.size.width,
                              y: 0,
                              width: contentView.frame.size.width - 20 - iconContainer.frame.size.width,
                              height: contentView.frame.size.height)
     }
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         iconImageView.image = nil
         label.text = nil
         iconContainer.backgroundColor = nil
+        mySwitch.isOn = false
     }
-    public func configure(with model: SettingsOption) {
+    public func configure(with model: SettingsSwitchOption) {
         label.text = model.title
         iconImageView.image = model.icon
         iconContainer.backgroundColor = model.iconBackgroundColor
+        mySwitch.isOn = model.isOn
     }
 }
