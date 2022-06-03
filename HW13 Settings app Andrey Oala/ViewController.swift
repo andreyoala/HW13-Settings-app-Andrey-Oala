@@ -1,7 +1,6 @@
 import UIKit
 
 struct Section {
-    let title: String
     let options: [SettingsOption]
 }
 
@@ -14,11 +13,7 @@ struct SettingsOption {
 
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    var settingsNames = [["Airplane Mode", "Wi-Fi", "Bluetooth", "Cellular"],
-                             ["Notifications", "Sounds & Haptics", "Focus", "Screen Time"],
-                             ["General", "Control Center", "Display & Brightness", "Home Screen", "Accessibility", "Wallpapers", "Siri & Search"]]
-    // let settingsImages = ["airplane", "wifi", "point.3.connected.trianglepath.dotted", "antenna.radiowaves.left.and.right", "app.badge.fill", "speaker.wave.3", "moon.fill", "hourglass", "gear", "switch.2", "textformat.size", "app.badge.fill", "figure.wave.circle", "photo.fill", "h.square.on.square.fill"]
+
     var models = [Section]()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -26,51 +21,53 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func configureCells() {
-        models.append(Section(title: "General", options: [
-            SettingsOption(title: "Airplane Mode", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemGreen) {
-                
+        models.append(Section(options: [
+            SettingsOption(title: "Airplane Mode", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemOrange) {
             },
-            SettingsOption(title: "Wi-Fi", icon: UIImage(systemName: "wifi"), iconBackgroundColor: .systemGreen) {
-                
+            SettingsOption(title: "Wi-Fi", icon: UIImage(systemName: "wifi"), iconBackgroundColor: .systemBlue) {
             },
-            SettingsOption(title: "Bluetooth", icon: UIImage(systemName: "point.3.connected.trianglepath.dotted"), iconBackgroundColor: .systemGreen) {
+            SettingsOption(title: "Bluetooth", icon: UIImage(systemName: "point.3.connected.trianglepath.dotted"), iconBackgroundColor: .systemBlue) {
                 
             },
             SettingsOption(title: "Cellular", icon: UIImage(systemName: "antenna.radiowaves.left.and.right"), iconBackgroundColor: .systemGreen) {
                 
-            },
-            SettingsOption(title: "Notifications", icon: UIImage(systemName: "app.badge.fill"), iconBackgroundColor: .systemGreen) {
+            }
+        ]))
+        models.append(Section(options: [
+            SettingsOption(title: "Notifications", icon: UIImage(systemName: "app.badge.fill"), iconBackgroundColor: .systemRed) {
                 
             },
-            SettingsOption(title: "Sounds & Haptics", icon: UIImage(systemName: "speaker.wave.3"), iconBackgroundColor: .systemGreen) {
+            SettingsOption(title: "Sounds & Haptics", icon: UIImage(systemName: "speaker.wave.3"), iconBackgroundColor: .systemPink) {
                 
             },
-            SettingsOption(title: "Focus", icon: UIImage(systemName: "moon.fill"), iconBackgroundColor: .systemGreen) {
+            SettingsOption(title: "Focus", icon: UIImage(systemName: "moon.fill"), iconBackgroundColor: .systemIndigo) {
                 
             },
-            SettingsOption(title: "Screen Time", icon: UIImage(systemName: "hourglass"), iconBackgroundColor: .systemGreen) {
+            SettingsOption(title: "Screen Time", icon: UIImage(systemName: "hourglass"), iconBackgroundColor: .systemIndigo) {
+                
+            }
+        ]))
+        models.append(Section(options: [
+            SettingsOption(title: "General", icon: UIImage(systemName: "gear"), iconBackgroundColor: .systemGray) {
                 
             },
-            SettingsOption(title: "General", icon: UIImage(systemName: "gear"), iconBackgroundColor: .systemGreen) {
+            SettingsOption(title: "Control Center", icon: UIImage(systemName: "switch.2"), iconBackgroundColor: .systemGray) {
                 
             },
-            SettingsOption(title: "Control Center", icon: UIImage(systemName: "switch.2"), iconBackgroundColor: .systemGreen) {
+            SettingsOption(title: "Display & Brightness", icon: UIImage(systemName: "textformat.size"), iconBackgroundColor: .systemBlue) {
                 
             },
-            SettingsOption(title: "Display & Brightness", icon: UIImage(systemName: "textformat.size"), iconBackgroundColor: .systemGreen) {
+            SettingsOption(title: "Home Screen", icon: UIImage(systemName: "app.badge.fill"), iconBackgroundColor: .systemIndigo) {
                 
             },
-            SettingsOption(title: "Home Screen", icon: UIImage(systemName: "app.badge.fill"), iconBackgroundColor: .systemGreen) {
-                
-            },
-            SettingsOption(title: "Accessibility", icon: UIImage(systemName: "figure.wave.circle"), iconBackgroundColor: .systemGreen) {
+            SettingsOption(title: "Accessibility", icon: UIImage(systemName: "figure.wave.circle"), iconBackgroundColor: .systemBlue) {
                 
             }
             ,
-            SettingsOption(title: "Wallpapers", icon: UIImage(systemName: "photo.fill"), iconBackgroundColor: .systemGreen) {
+            SettingsOption(title: "Wallpapers", icon: UIImage(systemName: "photo.fill"), iconBackgroundColor: .systemTeal) {
                 
             },
-            SettingsOption(title: "Siri & Search", icon: UIImage(systemName: "h.square.on.square.fill"), iconBackgroundColor: .systemGreen) {
+            SettingsOption(title: "Siri & Search", icon: UIImage(systemName: "h.square.on.square.fill"), iconBackgroundColor: .black) {
                 
             }
             
@@ -117,12 +114,10 @@ extension ViewController {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let model = models[indexPath.section].options[indexPath.row]
-        model.handler()
-        let cell = tableView.cellForRow(at: indexPath)
-            let text = cell?.textLabel?.text
-            if let text = text {
+            let text = model.title
                 print("Нажата ячейка \(text)")
-            }
+        model.handler()
     }
 }
+
 
