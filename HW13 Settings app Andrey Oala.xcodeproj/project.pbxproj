@@ -15,6 +15,8 @@
 		554C28832848C244008AE36B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 554C28812848C244008AE36B /* LaunchScreen.storyboard */; };
 		554C288B2848CB1C008AE36B /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554C288A2848CB1C008AE36B /* SettingsTableViewCell.swift */; };
 		554C288F284A059C008AE36B /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554C288E284A059C008AE36B /* SwitchTableViewCell.swift */; };
+		559EBE11286710E4003FB6B6 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559EBE10286710E4003FB6B6 /* Settings.swift */; };
+		559EBE1328671134003FB6B6 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559EBE1228671134003FB6B6 /* SettingsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		554C28842848C244008AE36B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		554C288A2848CB1C008AE36B /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		554C288E284A059C008AE36B /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		559EBE10286710E4003FB6B6 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		559EBE1228671134003FB6B6 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +64,43 @@
 		554C28752848C243008AE36B /* HW13 Settings app Andrey Oala */ = {
 			isa = PBXGroup;
 			children = (
+				559EBE0F2867108E003FB6B6 /* Model */,
+				559EBE0E28671084003FB6B6 /* View */,
+				559EBE0D28671076003FB6B6 /* Controller */,
 				554C28762848C243008AE36B /* AppDelegate.swift */,
 				554C28782848C243008AE36B /* SceneDelegate.swift */,
-				554C287A2848C243008AE36B /* ViewController.swift */,
 				554C287C2848C243008AE36B /* Main.storyboard */,
 				554C287F2848C244008AE36B /* Assets.xcassets */,
 				554C28812848C244008AE36B /* LaunchScreen.storyboard */,
 				554C28842848C244008AE36B /* Info.plist */,
-				554C288A2848CB1C008AE36B /* SettingsTableViewCell.swift */,
-				554C288E284A059C008AE36B /* SwitchTableViewCell.swift */,
 			);
 			path = "HW13 Settings app Andrey Oala";
+			sourceTree = "<group>";
+		};
+		559EBE0D28671076003FB6B6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				554C287A2848C243008AE36B /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		559EBE0E28671084003FB6B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				554C288E284A059C008AE36B /* SwitchTableViewCell.swift */,
+				554C288A2848CB1C008AE36B /* SettingsTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		559EBE0F2867108E003FB6B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				559EBE10286710E4003FB6B6 /* Settings.swift */,
+				559EBE1228671134003FB6B6 /* SettingsModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,10 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				559EBE11286710E4003FB6B6 /* Settings.swift in Sources */,
 				554C287B2848C243008AE36B /* ViewController.swift in Sources */,
 				554C28772848C243008AE36B /* AppDelegate.swift in Sources */,
 				554C288F284A059C008AE36B /* SwitchTableViewCell.swift in Sources */,
 				554C288B2848CB1C008AE36B /* SettingsTableViewCell.swift in Sources */,
+				559EBE1328671134003FB6B6 /* SettingsModel.swift in Sources */,
 				554C28792848C243008AE36B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
