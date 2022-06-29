@@ -27,7 +27,7 @@
 		554C287D2848C243008AE36B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		554C287F2848C244008AE36B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		554C28822848C244008AE36B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		554C28842848C244008AE36B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		554C28842848C244008AE36B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "HW13 Settings app Andrey Oala/Resources/Info.plist"; sourceTree = SOURCE_ROOT; };
 		554C288A2848CB1C008AE36B /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		554C288E284A059C008AE36B /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		559EBE10286710E4003FB6B6 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -64,26 +64,20 @@
 		554C28752848C243008AE36B /* HW13 Settings app Andrey Oala */ = {
 			isa = PBXGroup;
 			children = (
-				559EBE0F2867108E003FB6B6 /* Model */,
-				559EBE0E28671084003FB6B6 /* View */,
-				559EBE0D28671076003FB6B6 /* Controller */,
-				554C28762848C243008AE36B /* AppDelegate.swift */,
-				554C28782848C243008AE36B /* SceneDelegate.swift */,
-				554C287C2848C243008AE36B /* Main.storyboard */,
-				554C287F2848C244008AE36B /* Assets.xcassets */,
-				554C28812848C244008AE36B /* LaunchScreen.storyboard */,
-				554C28842848C244008AE36B /* Info.plist */,
+				559EBE152869B896003FB6B6 /* Sources */,
+				559EBE142869B86A003FB6B6 /* Resources */,
 			);
 			path = "HW13 Settings app Andrey Oala";
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		559EBE0D28671076003FB6B6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				554C287A2848C243008AE36B /* ViewController.swift */,
 			);
-			path = Controller;
-			sourceTree = "<group>";
+			name = Controller;
+			path = "HW13 Settings app Andrey Oala/Sources/Scenes/Controller";
+			sourceTree = SOURCE_ROOT;
 		};
 		559EBE0E28671084003FB6B6 /* View */ = {
 			isa = PBXGroup;
@@ -101,6 +95,45 @@
 				559EBE1228671134003FB6B6 /* SettingsModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		559EBE142869B86A003FB6B6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				554C28812848C244008AE36B /* LaunchScreen.storyboard */,
+				554C287C2848C243008AE36B /* Main.storyboard */,
+				554C28842848C244008AE36B /* Info.plist */,
+				554C287F2848C244008AE36B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		559EBE152869B896003FB6B6 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				559EBE172869B8AC003FB6B6 /* Scenes */,
+				559EBE162869B8A2003FB6B6 /* App */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		559EBE162869B8A2003FB6B6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				554C28782848C243008AE36B /* SceneDelegate.swift */,
+				554C28762848C243008AE36B /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		559EBE172869B8AC003FB6B6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				559EBE0D28671076003FB6B6 /* Controller */,
+				559EBE0E28671084003FB6B6 /* View */,
+				559EBE0F2867108E003FB6B6 /* Model */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,7 +362,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G56UY8T9JR;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "HW13 Settings app Andrey Oala/Info.plist";
+				INFOPLIST_FILE = "/Users/andrey/Desktop/Projects/HW13 Settings app Andrey Oala/HW13 Settings app Andrey Oala/Resources/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "/Users/andrey/Desktop/Projects/HW13 Settings app Andrey Oala/HW13 Settings app Andrey Oala/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -357,7 +391,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G56UY8T9JR;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "HW13 Settings app Andrey Oala/Info.plist";
+				INFOPLIST_FILE = "/Users/andrey/Desktop/Projects/HW13 Settings app Andrey Oala/HW13 Settings app Andrey Oala/Resources/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "/Users/andrey/Desktop/Projects/HW13 Settings app Andrey Oala/HW13 Settings app Andrey Oala/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

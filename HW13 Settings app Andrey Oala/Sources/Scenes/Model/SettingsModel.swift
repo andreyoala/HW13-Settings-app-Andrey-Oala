@@ -1,5 +1,43 @@
 import UIKit
 
+// MARK: - Strings
+enum Strings {
+    static let airplaneModeTitle = "Airplane Mode"
+    static let wifiTitle = "Wi-Fi"
+    static let bluetoothTitle = "Bluetooth"
+    static let cellularTitle = "Cellular"
+    static let notificationsTitle = "Notifications"
+    static let soundsAndHapticsTitle = "Sounds & Haptics"
+    static let focusModeTitle = "Focus"
+    static let screenTimeTitle = "Screen Time"
+    static let generalOptionsTitle = "General"
+    static let controlCenterTitle = "Control Center"
+    static let displayAndBrightnessTitle = "Display & Brightness"
+    static let homeScreenTitle = "Home Screen"
+    static let accessibilityTitle = "Accessibility"
+    static let wallpapersTitle = "Wallpapers"
+    static let siriAndSearchTitle = "Siri & Search"
+}
+
+// MARK: - Icons
+enum Icons {
+    static let airplaneModeIcon = "airplane"
+    static let wifiIcon = "wifi"
+    static let bluetoothIcon = "point.3.connected.trianglepath.dotted"
+    static let cellularIcon = "antenna.radiowaves.left.and.right"
+    static let notificationsIcon = "app.badge.fill"
+    static let soundsAndHapticsIcon = "speaker.wave.3"
+    static let focusModeIcon = "moon.fill"
+    static let screenTimeIcon = "hourglass"
+    static let generalOptionsIcon = "gear"
+    static let controlCenterIcon = "switch.2"
+    static let displayAndBrightnessIcon = "textformat.size"
+    static let homeScreenIcon = "app.badge.fill"
+    static let accessibilityIcon = "figure.wave.circle"
+    static let wallpapersIcon = "photo.fill"
+    static let siriAndSearchIcon = "h.square.on.square.fill"
+}
+
 func configureCells() {
     models.append(Section(options: [
         .switchCell(model: SettingsSwitchOption(title: Strings.airplaneModeTitle, icon: UIImage(systemName: Icons.airplaneModeIcon), iconBackgroundColor: .systemOrange, handler: {
